@@ -1,0 +1,45 @@
+Build the Docker Image:
+
+docker build -t websocket-docker-app .
+
+---
+Run the Container on the PC:
+
+docker run -p 3000:3000 websocket-docker-app
+
+---
+Get the Image Name or ID:
+If you created your container from an image, find the image name or ID by running:
+
+docker images
+
+---
+Save the Image to a .tar File:
+Note the IMAGE ID or REPOSITORY (name) of your Docker image (e.g., websocket-docker-app).
+Use the docker save command to export the image as a .tar file.
+Replace websocket-docker-app with your actual image name:
+
+docker save -o websocket-docker-app.tar websocket-docker-app
+
+This command creates a file called websocket-docker-app.tar in the current directory, 
+containing the Docker image.
+---
+Export the Image:
+
+docker save -o websocket-docker-app.tar websocket-docker-app
+
+---
+Transfer the .tar file to the new PC.
+Load the Image on the New PC:
+
+docker load -i websocket-docker-app.tar
+
+---
+
+
+
+
+
+
+
+
